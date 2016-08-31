@@ -2,7 +2,7 @@
 #
 # @name SSUAV
 #
-# @type Hybrid Airship
+# @type Plane A-Tail
 #
 # @output MAIN1 roll left
 # @output MAIN2 roll right
