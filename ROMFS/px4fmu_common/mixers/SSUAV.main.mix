@@ -41,11 +41,11 @@ Two scalers total (output, roll).
 
 Each side takes only 10000 input - from middle to edge.
 
-M: 2
+M: 1
 O:      10000   10000      0        -10000  10000
 S: 0 0  0       10000      0        -10000  10000
 
-M: 2
+M: 1
 O:      10000   10000      0        -10000  10000
 S: 0 0  0       -10000     0        -10000  10000
 
@@ -53,14 +53,19 @@ Pitch motor mixers
 -----------------
 Two scalers total (output, pitch).
 
-M: 2
-O:      10000   10000      0        -10000  10000
-S: 1 0  0       10000      0        -10000  10000
+Each side takes only 10000 input - from middle to edge.
 
-M: 2
+M: 1
 O:      10000   10000      0        -10000  10000
-S: 1 0  0       -10000     0        -10000  10000
+S: 0 1  0       10000      0        -10000  10000
+
+M: 1
+O:      10000   10000      0        -10000  10000
+S: 0 1  0      -10000     0        -10000  10000
 
 Steerable landing gear
 --------------
-  
+
+M: 1
+O:      10000   10000      0        -10000  10000
+S: 0 0  -10000 -10000      0        -10000  10000
