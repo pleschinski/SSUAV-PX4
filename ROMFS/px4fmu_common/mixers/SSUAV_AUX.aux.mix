@@ -1,0 +1,18 @@
+Aileron/v-tail/throttle/wheel/flaps mixer for PX4FMU
+=======================================================
+
+This file defines the auxiliary mixer for the experimental SSUAV Hybrid Airship using PX4FMU.
+Mixing is limited to outputs. 2 for roll, 2 for pitch and 4 for thrust. It is assumed
+that if additional thrust motors are required, they will be connected in parallel
+with any of the 4 controllable motors.
+
+Inputs to the mixer come from channel group 0 (vehicle attitude), channels 0
+(roll), 1 (pitch), 2 (yaw) and 3 (thrust).
+
+
+Steerable landing gear
+--------------
+
+M: 1
+O:      10000   10000      0        -10000  10000
+S: 0 2  -10000 -10000      0        -10000  10000
