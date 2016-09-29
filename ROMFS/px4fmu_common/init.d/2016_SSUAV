@@ -27,6 +27,7 @@ sh /etc/init.d/rc.fw_defaults
 param set PWM_DISARMED 1000
 
 set MIXER SSUAV
+set MIXER_AUX SSUAV_AUX
 
 # use PWM parameters for all channels
 set PWM_OUT 12345678
