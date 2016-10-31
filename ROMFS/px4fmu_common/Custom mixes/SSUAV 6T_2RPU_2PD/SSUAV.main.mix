@@ -2,7 +2,8 @@ Aileron/v-tail/throttle/wheel/flaps mixer for PX4FMU
 =======================================================
 
 This file defines the mixer for the experimental SSUAV Hybrid Airship using PX4FMU.
-Mixing is limited to outputs. 2 for roll / pitch up, 6 for thrust.
+2 mixers for pitch down, 2 for roll / pitch up, 6 for thrust.
+This file contains only the thrust/yaw mixers. SSUAV_AUX.aux.mix contains the roll and pitch mixers.
 
 Inputs to the mixer come from channel group 0 (vehicle attitude), channels 0
 (roll), 1 (pitch), 2 (yaw) and 3 (thrust).
@@ -33,33 +34,12 @@ O:      10000   10000      0        -10000  10000
 S: 0 2  10000   0          0        -10000  10000
 S: 0 3  0       20000     -10000    -10000  10000
 
-
-M: 2
-O:      10000   10000      0         -10000  10000
-S: 0 0  0   10000          -5000     -10000  10000
-S: 0 1  0   10000          -5000     -10000  10000
-
-M: 2
-O:      10000   10000      0         -10000  10000
-S: 0 0 -10000   0          -5000     -10000  10000
-S: 0 1  0       10000      -5000     -10000  10000
-
-
-
-M: 2
-O:      10000   10000      0       -10000  10000
-S: 0 2  0      -10000      0       -10000  10000
-S: 0 3  0       20000     -10000   -10000  10000
-
 M: 2
 O:      10000   10000      0        -10000  10000
 S: 0 2  10000   0          0        -10000  10000
 S: 0 3  0       20000     -10000    -10000  10000
 
-
-Roll / Pitch down motors mixers
--------------
-These motors fire differentially to create a roll moment, and they fire together to create a pitch down moment
-Three scalers total (output, roll, pitch).
-
-Each side takes only 10000 input - from middle to edge.
+M: 2
+O:      10000   10000      0       -10000  10000
+S: 0 2  0      -10000      0       -10000  10000
+S: 0 3  0       20000     -10000   -10000  10000
